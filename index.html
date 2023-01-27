@@ -48,80 +48,10 @@
                     </div>
                     <div class="contacts">
                         <ul class="contacts-list">
-                            <li class="single-contact active">
-                                <img src="img/avatar_1.jpg" alt="User 1" class="user-pic">
+                            <li class="single-contact" v-for="(contact, index) in contacts">
+                                <img class="user-pic" :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">                                
                                 <div class="txt-box">
-                                    <p class="small-txt">Michele</p>
-                                    <p class="smaller-txt grey-txt"> Ultimo messaggio inviato</p>
-                                </div>
-                                <div class="date-box">
-                                    <p class="smaller-txt grey-txt">12.00</p>
-                                </div>
-                            </li>
-                            <li class="single-contact">
-                                <img src="img/avatar_2.jpg" alt="User 2" class="user-pic">
-                                <div class="txt-box">
-                                    <p class="small-txt">Michele</p>
-                                    <p class="smaller-txt grey-txt"> Ultimo messaggio inviato</p>
-                                </div>
-                                <div class="date-box">
-                                    <p class="smaller-txt grey-txt">12.00</p>
-                                </div>
-                            </li>
-                            <li class="single-contact">
-                                <img src="img/avatar_3.jpg" alt="User 3" class="user-pic">
-                                <div class="txt-box">
-                                    <p class="small-txt">Michele</p>
-                                    <p class="smaller-txt grey-txt"> Ultimo messaggio inviato</p>
-                                </div>
-                                <div class="date-box">
-                                    <p class="smaller-txt grey-txt">12.00</p>
-                                </div>
-                            </li>
-                            <li class="single-contact">
-                                <img src="img/avatar_4.jpg" alt="User 4" class="user-pic">
-                                <div class="txt-box">
-                                    <p class="small-txt">Michele</p>
-                                    <p class="smaller-txt grey-txt"> Ultimo messaggio inviato</p>
-                                </div>
-                                <div class="date-box">
-                                    <p class="smaller-txt grey-txt">12.00</p>
-                                </div>
-                            </li>
-                            <li class="single-contact">
-                                <img src="img/avatar_5.jpg" alt="User 5" class="user-pic">
-                                <div class="txt-box">
-                                    <p class="small-txt">Michele</p>
-                                    <p class="smaller-txt grey-txt"> Ultimo messaggio inviato</p>
-                                </div>
-                                <div class="date-box">
-                                    <p class="smaller-txt grey-txt">12.00</p>
-                                </div>
-                            </li>
-                            <li class="single-contact">
-                                <img src="img/avatar_6.jpg" alt="User 6" class="user-pic">
-                                <div class="txt-box">
-                                    <p class="small-txt">Michele</p>
-                                    <p class="smaller-txt grey-txt"> Ultimo messaggio inviato</p>
-                                </div>
-                                <div class="date-box">
-                                    <p class="smaller-txt grey-txt">12.00</p>
-                                </div>
-                            </li>
-                            <li class="single-contact">
-                                <img src="img/avatar_7.jpg" alt="User 7" class="user-pic">
-                                <div class="txt-box">
-                                    <p class="small-txt">Michele</p>
-                                    <p class="smaller-txt grey-txt"> Ultimo messaggio inviato</p>
-                                </div>
-                                <div class="date-box">
-                                    <p class="smaller-txt grey-txt">12.00</p>
-                                </div>
-                            </li>
-                            <li class="single-contact">
-                                <img src="img/avatar_8.jpg" alt="User 8" class="user-pic">
-                                <div class="txt-box">
-                                    <p class="small-txt">Michele</p>
+                                    <p>{{ contact.name }}</p>
                                     <p class="smaller-txt grey-txt"> Ultimo messaggio inviato</p>
                                 </div>
                                 <div class="date-box">
