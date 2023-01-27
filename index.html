@@ -54,10 +54,10 @@
                                 <img class="user-pic" :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">                                
                                 <div class="txt-box">
                                     <p>{{ contact.name }}</p>
-                                    <p class="smaller-txt grey-txt"> Ultimo messaggio inviato</p>
+                                    <p class="smaller-txt grey-txt">{{contact.messages[contact.messages.length - 1].message}}</p>
                                 </div>
                                 <div class="date-box">
-                                    <p class="smaller-txt grey-txt">12.00</p>
+                                    <p class="smaller-txt grey-txt">{{contact.messages[contact.messages.length - 1].date.slice(11,16)}}</p>
                                 </div>
                             </li>
                         </ul>
@@ -88,7 +88,7 @@
                             received: singleMessage.status == 'received'
                         }">
                             {{ singleMessage.message }}                            
-                            <span class="date smaller-txt grey-txt">{{ singleMessage.date }}</span>
+                            <span class="date smaller-txt grey-txt">{{ singleMessage.date.slice(11,16) }}</span>
                         </div>
                         
                     </div>
@@ -106,6 +106,7 @@
         </div>
         
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>

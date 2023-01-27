@@ -1,3 +1,4 @@
+
 const { createApp } = Vue;
 
 createApp({
@@ -174,7 +175,7 @@ createApp({
     methods: {
         sendMessage() {
             const newMessageObj = {
-                date: '10/01/2020 15:30:55',
+                date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
                 message: this.newMessage,
                 status: 'sent'
             };
@@ -184,7 +185,7 @@ createApp({
 
             setTimeout(() => {
             const newReplyObj = {
-                date: '10/01/2020 15:30:55',
+                date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
                 message: 'Ok!',
                 status: 'received'
             };
