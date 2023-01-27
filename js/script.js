@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            active: 0,
+            active: 0,            
             contacts: [
                 {
                 name: 'Michele',
@@ -166,13 +166,44 @@ createApp({
                 }
                 ],
                 }
-                ]
+                ],
+                newMessage: '',
+                searchedContact:'',                
         };
     },
     methods: {
+        sendMessage() {
+            const newMessageObj = {
+                date: '10/01/2020 15:30:55',
+                message: this.newMessage,
+                status: 'sent'
+            };
 
-    },
-    mounted(){
+            this.contacts[this.active].messages.push(newMessageObj);
+            this.newMessage = '';
 
+            setTimeout(() => {
+            const newReplyObj = {
+                date: '10/01/2020 15:30:55',
+                message: 'Ok!',
+                status: 'received'
+            };
+
+            this.contacts[this.active].messages.push(newReplyObj);
+        }, 1000)
     },
+    
+    filteredContacts() {
+        this.contacts.filter(contact => {
+            contact.visible = contact.name.toLowerCase().includes(this.searchedContact.toLowerCase())
+        });
+    }
+},
+
+    computed: {        
+        activeContacts() {
+            return this.contacts.filter(contact => contact.visible)
+        },
+        }       
+        
 }).mount('#app');

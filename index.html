@@ -43,12 +43,12 @@
                     <div class="search-box">
                         <div class="search-bar">
                             <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            <input @keyup="filteredContacts()" v-model="searchedContact" type="text" placeholder="Cerca o inizia una nuova chat">
                         </div>
                     </div>
                     <div class="contacts">
                         <ul class="contacts-list">
-                            <li class="single-contact" v-for="(contact, index) in contacts"
+                            <li class="single-contact" v-for="(contact, index) in activeContacts"
                                 :class="{active: active == index}"
                                 @click="active = index">
                                 <img class="user-pic" :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">                                
@@ -96,7 +96,7 @@
                         <button>
                             <i class="fa-regular fa-face-smile fa-lg"></i>
                         </button>
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input @keyup.enter="sendMessage" type="text" v-model="newMessage" placeholder="Scrivi un messaggio">
                         <button>
                             <i class="fa-solid fa-microphone fa-lg"></i>
                         </button>
