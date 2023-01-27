@@ -1,0 +1,233 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body * {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* COLORI */
+:root {
+    --my-white:#fafafa;
+    --my-almost-white: #eeeeee;
+    --my-light-gray: #dddddd;
+    --my-medium-gray: #b1b1b1;
+    --my-grey: #8d9396;
+    --my-dark-gray: #6b7376;
+    --light-blue: #8edafc;
+    --light-green: #d5f9ba;
+    --light-beige: #f3eeea;
+}
+
+/* GENERALE */
+body {
+    height: 100vh;
+    background: rgb(0,150,136);
+    background: linear-gradient(180deg, rgba(0,150,136,1) 20%, rgba(218,219,212,1) 20%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#app {
+    width: 100%;
+}
+
+#container {
+    width: 80%;
+    height: 90vh;
+    margin: 0 auto;
+    display: flex;
+    background-color: var(--my-white);
+}
+
+.user-pic {
+    /* display: block; */
+    width: 3rem;
+    margin-right: 1rem;
+    border-radius: 50%;    
+}
+
+button {
+    cursor: pointer;
+}
+
+/* TESTI */
+.small-txt {
+    font-size: 0.9rem;
+}
+
+.smaller-txt {
+    font-size: 0.7rem;
+    line-height: 0.5rem;
+    margin-top: 0.2rem;
+}
+
+.grey-txt {
+    color: var(--my-grey);
+}
+
+/* HEADERS */
+aside header, main header {
+    background-color: var(--my-almost-white);
+    display: flex;
+    justify-content: space-between;
+}
+
+aside header .user-info, main header .info-active-chat {
+    display: flex;
+    align-items:center;
+    padding: 1rem;
+}
+
+aside header .buttons, main header .buttons {
+    display: flex;
+    padding-right: 2rem;
+}
+
+aside header .buttons button, main header .buttons button{
+    display: flex;
+    align-items: center;
+    color: var(--my-medium-gray);
+    background-color: transparent;
+    border: none;
+    padding-left: 1.5rem;
+}
+
+/* ASIDE */
+aside {
+    width: 30%;
+    height: 100%0;
+    display: flex;
+    flex-direction: column;
+}
+
+aside .alert-box {
+    display: flex;
+    background-color: var(--light-blue);
+    padding: 1rem;
+}
+
+aside .alert-box .circle-bg {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3rem;
+    margin-right: 1rem;
+    color: var(--light-blue);
+    background-color: var(--my-white);
+}
+
+aside .search-box {
+    background-color: var(--my-almost-white);
+    padding: 0.5rem;
+}
+
+aside .search-box .search-bar {
+    background-color: var(--my-white);
+    display: flex;
+    flex-grow: 1;
+}
+
+aside .search-box .search-bar i {
+    color: var(--my-medium-gray);
+    padding: 0.5rem 1rem;
+    border-right: 1px solid var(--my-light-gray);
+}
+
+aside .search-box input {
+    border: none;
+    padding: 0.5rem 1rem;
+    outline: none;
+    background-color: var(--my-white);
+    flex-grow: 1;
+}
+
+aside .contacts {
+    overflow-y: auto;
+}
+
+aside .contacts .contacts-list {    
+    background-color: var(--my-white);    
+    list-style: none;
+}
+
+aside .contacts .contacts-list .single-contact {
+    display: flex;
+    background-color: var(--my-white);
+    padding: 0.5rem 1rem;
+}
+
+aside .contacts .contacts-list .single-contact.active {
+    background-color: var(--my-light-gray);
+}
+
+aside .contacts .contacts-list .single-contact .txt-box {
+    flex-grow: 1;
+}
+
+/* MAIN */
+main {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-left: 0.5px solid var(--my-medium-gray);
+}
+
+main .chat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    padding: 2rem;
+    background-image: url('../img/mine.jpg');
+}
+
+main .chat-box .msg {
+    position: relative;
+    margin-bottom: 2rem;
+    padding: 1rem 3rem 1rem 1rem;
+    border-radius: 0.65rem;
+    text-align: justify;
+    max-width: 80%;
+}
+
+main .chat-box .msg.sent {
+    align-self: flex-end;
+    background-color: var(--light-green);
+}
+
+main .chat-box .msg.received {
+    background-color: var(--my-white);
+}
+
+main .chat-box .msg .date {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
+
+main .writing-box {
+    display: flex;
+    background-color: var(--light-beige);
+    padding: 0.5rem 0;
+}
+
+main .writing-box input {
+    padding: 0.65rem;
+    flex-grow: 1;
+    border: none;
+    outline: none;    
+}
+
+main .writing-box button {
+    color: var(--my-dark-gray);
+    background-color: transparent;
+    border: none;
+    margin: 0 1.7rem;
+}

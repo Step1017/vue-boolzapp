@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <link rel="stylesheet" href="css/style.css">
+        <title>Vue Boolzapp</title>
+    </head>
+    <body>
+        <div id="app">
+            <div id="container">
+                <aside>
+                    <header>
+                        <div class="user-info">
+                            <img src="img/avatar_io.jpg" alt="User Picture" class="user-pic">
+                            <span class="small-txt">Stefania</span>
+                        </div>
+                        <div class="buttons">
+                            <button><i class="fa-solid fa-circle-notch fa-xl"></i></button>
+                            <button><i class="fa-solid fa-message fa-xl"></i></button>
+                            <button><i class="fa-solid fa-ellipsis-vertical fa-xl"></i></button>
+                        </div>
+                    </header>
+                    <div class="alert-box">
+                        <div class="circle-bg">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+                        <div class="txt-box">
+                            <p class="small-txt">Ricevi notifiche di nuovi messaggi</p>
+                            <p class="smaller-txt">
+                                <a href="#" class="grey-txt">Attiva notifiche desktop</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="search-box">
+                        <div class="search-bar">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        </div>
+                    </div>
+                    <div class="contacts">
+                        <ul class="contacts-list">
+                            <li class="single-contact active">
+                                <img src="img/avatar_1.jpg" alt="User 1" class="user-pic">
+                                <div class="txt-box">
+                                    <p class="small-txt">Michele</p>
+                                    <p class="smaller-txt grey-txt"> Ultimo messaggio inviato</p>
+                                </div>
+                                <div class="date-box">
+                                    <p class="smaller-txt grey-txt">12.00</p>
+                                </div>
+                            </li>
+                            <li class="single-contact">
+                                <img src="img/avatar_2.jpg" alt="User 2" class="user-pic">
+                                <div class="txt-box">
+                                    <p class="small-txt">Michele</p>
+                                    <p class="smaller-txt grey-txt"> Ultimo messaggio inviato</p>
+                                </div>
+                                <div class="date-box">
+                                    <p class="smaller-txt grey-txt">12.00</p>
+                                </div>
+                            </li>
+                            <li class="single-contact">
+                                <img src="img/avatar_3.jpg" alt="User 3" class="user-pic">
+                                <div class="txt-box">
+                                    <p class="small-txt">Michele</p>
+                                    <p class="smaller-txt grey-txt"> Ultimo messaggio inviato</p>
+                                </div>
+                                <div class="date-box">
+                                    <p class="smaller-txt grey-txt">12.00</p>
+                                </div>
+                            </li>
+                            <li class="single-contact">
+                                <img src="img/avatar_4.jpg" alt="User 4" class="user-pic">
+                                <div class="txt-box">
+                                    <p class="small-txt">Michele</p>
+                                    <p class="smaller-txt grey-txt"> Ultimo messaggio inviato</p>
+                                </div>
+                                <div class="date-box">
+                                    <p class="smaller-txt grey-txt">12.00</p>
+                                </div>
+                            </li>
+                            <li class="single-contact">
+                                <img src="img/avatar_5.jpg" alt="User 5" class="user-pic">
+                                <div class="txt-box">
+                                    <p class="small-txt">Michele</p>
+                                    <p class="smaller-txt grey-txt"> Ultimo messaggio inviato</p>
+                                </div>
+                                <div class="date-box">
+                                    <p class="smaller-txt grey-txt">12.00</p>
+                                </div>
+                            </li>
+                            <li class="single-contact">
+                                <img src="img/avatar_6.jpg" alt="User 6" class="user-pic">
+                                <div class="txt-box">
+                                    <p class="small-txt">Michele</p>
+                                    <p class="smaller-txt grey-txt"> Ultimo messaggio inviato</p>
+                                </div>
+                                <div class="date-box">
+                                    <p class="smaller-txt grey-txt">12.00</p>
+                                </div>
+                            </li>
+                            <li class="single-contact">
+                                <img src="img/avatar_7.jpg" alt="User 7" class="user-pic">
+                                <div class="txt-box">
+                                    <p class="small-txt">Michele</p>
+                                    <p class="smaller-txt grey-txt"> Ultimo messaggio inviato</p>
+                                </div>
+                                <div class="date-box">
+                                    <p class="smaller-txt grey-txt">12.00</p>
+                                </div>
+                            </li>
+                            <li class="single-contact">
+                                <img src="img/avatar_8.jpg" alt="User 8" class="user-pic">
+                                <div class="txt-box">
+                                    <p class="small-txt">Michele</p>
+                                    <p class="smaller-txt grey-txt"> Ultimo messaggio inviato</p>
+                                </div>
+                                <div class="date-box">
+                                    <p class="smaller-txt grey-txt">12.00</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>            
+                </aside>
+                <main>
+                    <header>
+                        <div class="info-active-chat">
+                            <img src="img/avatar_1.jpg" alt="User 1" class="user-pic">
+                            <div class="txt-box">
+                                <p class="small-txt">Michele</p>
+                                <p class="smaller-txt grey-txt"> Ultimo messaggio inviato</p>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
+                            <button><i class="fa-solid fa-paperclip fa-xl"></i></button>
+                            <button><i class="fa-solid fa-ellipsis-vertical fa-xl"></i></button>
+                        </div>                        
+                    </header>
+                    <div class="chat-box">
+                        <div class="sent msg">
+                            <p>Hai portato a spasso il cane?</p>
+                            <span class="date smaller-txt grey-txt">15.30</span>
+                        </div>
+                        <div class="received msg">
+                            <p>Certo!</p>
+                            <span class="date smaller-txt grey-txt">15.31</span>
+                        </div>                        
+                    </div>
+                    <div class="writing-box">
+                        <button>
+                            <i class="fa-regular fa-face-smile fa-lg"></i>
+                        </button>
+                        <input type="text" placeholder="Scrivi un messaggio">
+                        <button>
+                            <i class="fa-solid fa-microphone fa-lg"></i>
+                        </button>
+                    </div>
+                </main>
+            </div>
+        </div>
+        
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
