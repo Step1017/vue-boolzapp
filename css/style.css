@@ -45,7 +45,7 @@ body {
 }
 
 .user-pic {
-    /* display: block; */
+    display: block;
     width: 3rem;
     margin-right: 1rem;
     border-radius: 50%;    
@@ -160,6 +160,7 @@ aside .contacts .contacts-list .single-contact {
     display: flex;
     background-color: var(--my-white);
     padding: 0.5rem 1rem;
+    cursor: pointer;
 }
 
 aside .contacts .contacts-list .single-contact.active {

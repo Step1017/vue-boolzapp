@@ -48,7 +48,9 @@
                     </div>
                     <div class="contacts">
                         <ul class="contacts-list">
-                            <li class="single-contact" v-for="(contact, index) in contacts">
+                            <li class="single-contact" v-for="(contact, index) in contacts"
+                                :class="{active: active == index}"
+                                @click="active = index">
                                 <img class="user-pic" :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">                                
                                 <div class="txt-box">
                                     <p>{{ contact.name }}</p>
@@ -64,9 +66,9 @@
                 <main>
                     <header>
                         <div class="info-active-chat">
-                            <img src="img/avatar_1.jpg" alt="User 1" class="user-pic">
+                            <img class="user-pic" :src="'img/avatar' + contacts[active].avatar + '.jpg'" :alt="contacts[active].name">
                             <div class="txt-box">
-                                <p class="small-txt">Michele</p>
+                                <p class="small-txt">{{ contacts[active].name }}</p>
                                 <p class="smaller-txt grey-txt"> Ultimo messaggio inviato</p>
                             </div>
                         </div>
@@ -77,14 +79,18 @@
                         </div>                        
                     </header>
                     <div class="chat-box">
-                        <div class="sent msg">
-                            <p>Hai portato a spasso il cane?</p>
-                            <span class="date smaller-txt grey-txt">15.30</span>
+                        <!-- Soluzione più veloce per effettuare meno controlli:
+                            <div class="msg" v-for="singleMessage in contacts[active].messages"
+                            :class="singleMessage.status"> -->
+                        <div class="msg" v-for="singleMessage in contacts[active].messages"
+                        :class="{
+                            sent: singleMessage.status == 'sent',
+                            received: singleMessage.status == 'received'
+                        }">
+                            {{ singleMessage.message }}                            
+                            <span class="date smaller-txt grey-txt">{{ singleMessage.date }}</span>
                         </div>
-                        <div class="received msg">
-                            <p>Certo!</p>
-                            <span class="date smaller-txt grey-txt">15.31</span>
-                        </div>                        
+                        
                     </div>
                     <div class="writing-box">
                         <button>
